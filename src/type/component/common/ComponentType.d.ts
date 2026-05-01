@@ -7,4 +7,4 @@
  * - `warning`: 警告类型，通常使用橙色/黄色系，用于警示用户注意
  * - `error`: 错误类型，通常使用红色系，用于表示错误或危险状态
  */
-export type ComponentType = "normal" | "info" | "warning" | "error"
+export type ComponentType = 'normal' | 'info' | 'warning' | 'error'

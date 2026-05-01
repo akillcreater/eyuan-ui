@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { computed } from "vue"
+  import { computed } from 'vue'
 
   interface Prop {
     width?: number
@@ -10,12 +10,12 @@
   const props = withDefaults(defineProps<Prop>(), {
     width: 1.25,
     height: 1.25,
-    color: "var(--primary-200)",
+    color: 'var(--primary-200)',
   })
 
-  const widthVal = computed(() => (props.width ? `${props.width}rem` : ""))
+  const widthVal = computed(() => (props.width ? `${props.width}rem` : ''))
 
-  const heightVal = computed(() => (props.height ? `${props.height}rem` : ""))
+  const heightVal = computed(() => (props.height ? `${props.height}rem` : ''))
 </script>
 <template>
   <svg

@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/vue3-vite"
+import type { Meta, StoryObj } from '@storybook/vue3-vite'
 
-import IconSearch from "./icon-search.vue"
+import IconSearch from './icon-search.vue'
 
 const meta = {
-  title: "Asset/Icon",
+  title: 'Asset/Icon',
 
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof IconSearch>
 
 export default meta

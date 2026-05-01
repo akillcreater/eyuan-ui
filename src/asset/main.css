@@ -141,7 +141,7 @@
   /* 深色文字 */
   --error-400: rgb(120, 20, 30); /* 深红 - 适合错误标题 */
 
-  font-family: "Fira Code", "JetBrains Mono", Consolas, "Courier New", monospace;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
 }
 
 /* 禁止文本选择 */

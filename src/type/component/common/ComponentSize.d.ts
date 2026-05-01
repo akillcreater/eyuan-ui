@@ -8,4 +8,4 @@
  * - `large`: 大尺寸，比默认尺寸更大
  * - `giant`: 超大尺寸，适用于需要突出显示的场景
  */
-export type ComponentSize = "tiny" | "small" | "medium" | "large" | "giant"
+export type ComponentSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant'

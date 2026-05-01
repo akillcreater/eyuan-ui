@@ -8,4 +8,4 @@
  * - `text`: 文本样式，无背景色和边框，类似普通文本
  * - `icon`: 图标样式，专为图标设计的样式
  */
-export type ComponentVariant = "filled" | "tinted" | "outlined" | "text" | "icon"
+export type ComponentVariant = 'filled' | 'tinted' | 'outlined' | 'text' | 'icon'

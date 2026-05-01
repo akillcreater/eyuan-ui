@@ -32,10 +32,10 @@
    * 提供多种样式、尺寸、状态的按钮，支持自定义图标和颜色
    */
 
-  import { computed, type Component } from "vue"
-  import type { ComponentSize } from "~/type/component/common/ComponentSize"
-  import type { ComponentType } from "~/type/component/common/ComponentType"
-  import type { ComponentVariant } from "~/type/component/common/Componentvariant"
+  import { computed, type Component } from 'vue'
+  import type { ComponentSize } from '~/type/component/common/ComponentSize'
+  import type { ComponentType } from '~/type/component/common/ComponentType'
+  import type { ComponentVariant } from '~/type/component/common/ComponentVariant'
 
   /**
    * 按钮组件属性接口
@@ -71,10 +71,18 @@
    * 属性默认值配置
    */
   const props = withDefaults(defineProps<Prop>(), {
+    label: '',
     disabled: false,
-    type: "normal",
-    variant: "filled",
-    size: "medium",
+    type: 'normal',
+    variant: 'filled',
+    size: 'medium',
+    iconLeft: undefined,
+    iconRight: undefined,
+    backgroundColor: '',
+    backgroundActiveColor: '',
+    labelColor: '',
+    labelActiveColor: '',
+    fontSize: '',
   })
 
   /**
@@ -82,7 +90,7 @@
    * @event click - 按钮点击事件
    */
   const emit = defineEmits<{
-    (e: "click"): void
+    (e: 'click'): void
   }>()
 
   /**
@@ -90,11 +98,11 @@
    * 将自定义颜色属性注入CSS变量
    */
   const styles = computed(() => ({
-    "--ey-btn-bg": props.backgroundColor,
-    "--ey-btn-bg-active": props.backgroundActiveColor,
-    "--ey-btn-label-color": props.labelColor,
-    "--ey-btn-label-color-active": props.labelActiveColor,
-    "--ey-btn-label-font-size": props.fontSize,
+    '--ey-btn-bg': props.backgroundColor,
+    '--ey-btn-bg-active': props.backgroundActiveColor,
+    '--ey-btn-label-color': props.labelColor,
+    '--ey-btn-label-color-active': props.labelActiveColor,
+    '--ey-btn-label-font-size': props.fontSize,
   }))
 
   /**
@@ -102,7 +110,7 @@
    * 根据属性组合生成对应的CSS类名
    */
   const classes = computed(() => ({
-    "eyuan-button": true,
+    'eyuan-button': true,
     [`eyuan-button--${props.type}`]: true,
     [`eyuan-button--${props.variant}`]: true,
     [`eyuan-button--${props.size}`]: true,
@@ -112,6 +120,4 @@
   }))
 </script>
 
-<style lang="scss" src="~/asset/component/atom/button.scss" scoped>
-  /* 引入外部样式文件 */
-</style>
+<style lang="scss" src="~/asset/component/atom/button.scss" scoped />
