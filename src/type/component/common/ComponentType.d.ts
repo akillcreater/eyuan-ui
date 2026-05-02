@@ -6,5 +6,6 @@
  * - `info`: 信息类型，通常使用蓝色系，用于展示信息提示
  * - `warning`: 警告类型，通常使用橙色/黄色系，用于警示用户注意
  * - `error`: 错误类型，通常使用红色系，用于表示错误或危险状态
+ * - `cancel`: 取消类型，通常使用灰色系，用于表示取消或返回操作
  */
-export type ComponentType = 'normal' | 'info' | 'warning' | 'error'
+export type ComponentType = 'normal' | 'info' | 'warning' | 'error' | 'cancel'

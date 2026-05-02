@@ -65,6 +65,8 @@
     labelActiveColor?: string
     /** 自定义字体大小 */
     fontSize?: string
+    /** 是否启用悬停动效（默认启用，设置为 false 可关闭 translateY 动效） */
+    activeEffect?: boolean
   }
 
   /**
@@ -83,6 +85,7 @@
     labelColor: '',
     labelActiveColor: '',
     fontSize: '',
+    activeEffect: true,
   })
 
   /**
@@ -116,6 +119,7 @@
     [`eyuan-button--${props.size}`]: true,
     [`eyuan-button--disabled`]: props.disabled,
     [`eyuan-button--${props.variant}--disabled`]: props.disabled,
+    'eyuan-button--no-active-effect': !props.activeEffect,
     unselectable: true,
   }))
 </script>

@@ -15,13 +15,13 @@
     align-items: center;
   }
 
-  &:hover:not(&--disabled) {
+  &:hover:not(&--disabled):not(&--no-active-effect) {
     transform: translateY(-0.05rem);
   }
 
-  &:focus-visible:not(&--disabled) {
+  &:focus-visible:not(&--disabled):not(&--no-active-effect) {
     outline-offset: var(--spacing-xs);
-    outline: var(--spacing-4xs) solid var(--primary-100);
+    outline: var(--spacing-4xs) solid var(--primary-200);
   }
 
   &--disabled {
@@ -30,87 +30,108 @@
   }
 
   &--normal {
-    --ey-fill-color: var(--primary-100);
-    --ey-fill-active-color: var(--primary-200);
+    --ey-fill-color: var(--primary-200);
+    --ey-fill-active-color: var(--primary-300);
     --ey-fill-font-color: var(--text-dark-100);
     --ey-fill-font-active-color: var(--text-dark-100);
 
-    --ey-tint-color: var(--bg-100);
-    --ey-tint-active-color: var(--bg-200);
-    --ey-tint-font-color: var(--text-300);
-    --ey-tint-font-active-color: var(--text-300);
+    --ey-tint-color: var(--primary-100);
+    --ey-tint-active-color: var(--primary-200);
+    --ey-tint-font-color: var(--primary-500);
+    --ey-tint-font-active-color: var(--primary-500);
 
     --ey-outline-color: white;
-    --ey-outline-active-color: var(--bg-100);
-    --ey-outline-border-color: var(--primary-100);
-    --ey-outline-font-color: var(--text-300);
-    --ey-outline-font-active-color: var(--text-400);
+    --ey-outline-active-color: var(--primary-100);
+    --ey-outline-border-color: var(--primary-300);
+    --ey-outline-font-color: var(--primary-400);
+    --ey-outline-font-active-color: var(--primary-500);
 
-    --ey-text-font-color: var(--text-300);
-    --ey-text-font-active-color: var(--text-400);
+    --ey-text-font-color: var(--primary-400);
+    --ey-text-font-active-color: var(--primary-500);
   }
 
   &--info {
-    --ey-fill-color: var(--notice-200);
-    --ey-fill-active-color: var(--notice-300);
+    --ey-fill-color: var(--notice-300);
+    --ey-fill-active-color: var(--notice-400);
     --ey-fill-font-color: var(--text-dark-100);
     --ey-fill-font-active-color: var(--text-dark-100);
 
     --ey-tint-color: var(--notice-100);
     --ey-tint-active-color: var(--notice-200);
-    --ey-tint-font-color: var(--notice-300);
-    --ey-tint-font-active-color: var(--notice-300);
+    --ey-tint-font-color: var(--notice-400);
+    --ey-tint-font-active-color: var(--notice-500);
 
     --ey-outline-color: white;
     --ey-outline-active-color: var(--notice-100);
     --ey-outline-border-color: var(--notice-300);
-    --ey-outline-font-color: var(--notice-300);
-    --ey-outline-font-active-color: var(--notice-300);
+    --ey-outline-font-color: var(--notice-400);
+    --ey-outline-font-active-color: var(--notice-500);
 
-    --ey-text-font-color: var(--notice-300);
-    --ey-text-font-active-color: var(--notice-200);
+    --ey-text-font-color: var(--notice-400);
+    --ey-text-font-active-color: var(--notice-500);
   }
 
   &--warning {
-    --ey-fill-color: var(--warning-200);
-    --ey-fill-active-color: var(--warning-300);
+    --ey-fill-color: var(--warning-300);
+    --ey-fill-active-color: var(--warning-400);
     --ey-fill-font-color: var(--text-dark-100);
     --ey-fill-font-active-color: var(--text-dark-100);
 
     --ey-tint-color: var(--warning-100);
     --ey-tint-active-color: var(--warning-200);
-    --ey-tint-font-color: var(--warning-300);
-    --ey-tint-font-active-color: var(--warning-300);
+    --ey-tint-font-color: var(--warning-400);
+    --ey-tint-font-active-color: var(--warning-500);
 
     --ey-outline-color: white;
     --ey-outline-active-color: var(--warning-100);
     --ey-outline-border-color: var(--warning-300);
-    --ey-outline-font-color: var(--warning-300);
-    --ey-outline-font-active-color: var(--warning-300);
+    --ey-outline-font-color: var(--warning-400);
+    --ey-outline-font-active-color: var(--warning-500);
 
-    --ey-text-font-color: var(--warning-300);
-    --ey-text-font-active-color: var(--warning-200);
+    --ey-text-font-color: var(--warning-400);
+    --ey-text-font-active-color: var(--warning-500);
   }
 
   &--error {
-    --ey-fill-color: var(--error-200);
-    --ey-fill-active-color: var(--error-300);
+    --ey-fill-color: var(--error-300);
+    --ey-fill-active-color: var(--error-400);
     --ey-fill-font-color: var(--text-dark-100);
     --ey-fill-font-active-color: var(--text-dark-100);
 
     --ey-tint-color: var(--error-100);
     --ey-tint-active-color: var(--error-200);
-    --ey-tint-font-color: var(--error-300);
-    --ey-tint-font-active-color: var(--error-300);
+    --ey-tint-font-color: var(--error-400);
+    --ey-tint-font-active-color: var(--error-500);
 
     --ey-outline-color: white;
     --ey-outline-active-color: var(--error-100);
     --ey-outline-border-color: var(--error-300);
-    --ey-outline-font-color: var(--error-300);
-    --ey-outline-font-active-color: var(--error-300);
+    --ey-outline-font-color: var(--error-400);
+    --ey-outline-font-active-color: var(--error-500);
 
-    --ey-text-font-color: var(--error-300);
-    --ey-text-font-active-color: var(--error-200);
+    --ey-text-font-color: var(--error-400);
+    --ey-text-font-active-color: var(--error-500);
+  }
+
+  &--cancel {
+    --ey-fill-color: var(--border-300);
+    --ey-fill-active-color: var(--border-400);
+    --ey-fill-font-color: var(--text-dark-100);
+    --ey-fill-font-active-color: var(--text-dark-100);
+
+    --ey-tint-color: var(--bg-200);
+    --ey-tint-active-color: var(--bg-300);
+    --ey-tint-font-color: var(--text-500);
+    --ey-tint-font-active-color: var(--text-400);
+
+    --ey-outline-color: white;
+    --ey-outline-active-color: var(--bg-200);
+    --ey-outline-border-color: var(--border-300);
+    --ey-outline-font-color: var(--text-400);
+    --ey-outline-font-active-color: var(--text-500);
+
+    --ey-text-font-color: var(--text-400);
+    --ey-text-font-active-color: var(--text-500);
   }
 
   &--filled,
@@ -159,6 +180,7 @@
   &--text {
     background-color: transparent;
     color: var(--ey-btn-label-color, var(--ey-text-font-color));
+    letter-spacing: var(--letter-spacing-normal);
 
     &:active:not(&--disabled) {
       color: var(--ey-btn-label-color-active, var(--ey-text-font-active-color));

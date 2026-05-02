@@ -28,7 +28,7 @@ const meta = {
     /** 按钮类型 */
     type: {
       control: 'select',
-      options: ['normal', 'info', 'warning', 'error'],
+      options: ['normal', 'info', 'warning', 'error', 'cancel'],
       description: '按钮的语义类型，影响颜色样式',
     },
     /** 按钮变体样式 */
@@ -68,6 +68,11 @@ const meta = {
       control: 'color',
       description: '自定义按钮激活状态文字颜色',
     },
+    /** 是否启用悬停动效 */
+    activeEffect: {
+      control: 'boolean',
+      description: '设置是否启用悬停动效（translateY 效果）',
+    },
   },
   args: {
     onClick: fn(),
@@ -105,6 +110,22 @@ export const Error: Story = {
   args: {
     label: 'Error Button',
     type: 'error',
+  },
+}
+
+/** 取消按钮 - cancel 类型 */
+export const Cancel: Story = {
+  args: {
+    label: 'Cancel',
+    type: 'cancel',
+  },
+}
+
+/** 无动效按钮 - 关闭悬停动效 */
+export const NoActiveEffect: Story = {
+  args: {
+    label: 'No Animation',
+    activeEffect: false,
   },
 }
 
@@ -245,6 +266,7 @@ export const TypeVariants: Story = {
         <EyButton v-bind="args" type="info" />
         <EyButton v-bind="args" type="warning" />
         <EyButton v-bind="args" type="error" />
+        <EyButton v-bind="args" type="cancel" />
       </div>
     `,
   }),
